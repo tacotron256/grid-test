@@ -7,14 +7,19 @@ var DemoGrid = {
       $item = $(
         '<li>' +
           '<div class="inner">' +
-            // '<div class="controls">' +
-            //   '<a href="#zoom1" class="resize" data-w="1" data-h="1">1x1</a>' +
-            //   '<a href="#zoom2" class="resize" data-w="2" data-h="1">2x1</a>' +
-            //   '<a href="#zoom3" class="resize" data-w="3" data-h="1">3x1</a>' +
-            //   '<a href="#zoom1" class="resize" data-w="1" data-h="2">1x2</a>' +
-            //   '<a href="#zoom2" class="resize" data-w="2" data-h="2">2x2</a>' +
-            // '</div>' +
-            i +
+              '<div class="panel">'+
+                '<div class="heading">'+
+                    '<span class="title">Chart Title ' + i + '</span>'+
+                      '<input type="checkbox" class="place-right panel-checkbox" checked>'+
+                '</div>'+
+                '<div class="content panel-content">'+
+                  '<img src="img/Pie-chart-icon.png" class="panel-image" />'+
+                  '<div class="panel-details">'+
+                    '<p class="padding10">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>'+
+                    '<button class="button place-right panel-search-button"><span class="mif-search"></span></button>'+
+                  '</div>'+
+                '</div>'+
+              '</div>'+
           '</div>' +
         '</li>'
       );

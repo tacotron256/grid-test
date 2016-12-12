@@ -29,9 +29,9 @@ body {
   .grid li {
     position: absolute;
     z-index: 1;
-    font-weight: bold;
-    line-height: 4em;
-    text-align: center;
+    /*font-weight: bold;*/
+    /*line-height: 4em;*/
+    /*text-align: center;*/
     cursor: pointer;
     -webkit-transition: top 0.2s,
                         left 0.2s,
@@ -126,4 +126,42 @@ body {
     padding: 14px 0 0 10px;
     font-size: 18px;
     line-height: 18px;
+  }
+
+
+
+
+  /*CSS for custom panel styles*/
+
+
+  .panel {
+    height: 100%;
+  }
+
+  .heading {
+    height: 12.5%;
+  }
+
+  .panel-checkbox {
+    margin-right: 5px;
+    height: 100%;
+  }
+
+  .panel-content {
+    height: 87.5%;
+  }
+
+  .panel-search-button {
+    position: absolute !important;
+    bottom: 5px;
+    right: 5px;
+  }
+  
+  .panel-image {
+    max-width: 40%;
+  }
+
+  .panel-details {
+    width: 60%;
+    float: right;
   }
