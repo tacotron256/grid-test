@@ -56,7 +56,7 @@ var DemoGrid = {
 };
 
 $(window).resize(function () {
-  if (DemoGrid.gridType === 'list')
+  if ($gridType === 'list')
   {
   resizeList();  
   }
@@ -67,7 +67,8 @@ $(window).resize(function () {
 });
 
 $(function () {
-  DemoGrid.buildElements($('#grid'), 'tile');
+  $gridType = 'tile';
+  DemoGrid.buildElements($('#grid'), $gridType);
 
   $('#grid').gridList({
     lanes: DemoGrid.currentSize,
@@ -77,7 +78,7 @@ $(function () {
     }
   });
     $('#grid').gridList('reflow');
-      if (DemoGrid.gridType === 'list')
+      if ($gridType === 'list')
         {
         resizeList();  
         }
