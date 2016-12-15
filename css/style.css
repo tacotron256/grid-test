@@ -1,5 +1,5 @@
 .grid-container {
-  max-width: 80%;
+  max-width: 100%;
   margin: 0 auto;
   position: absolute;
   top: 66px;
@@ -24,6 +24,7 @@
     /*font-weight: bold;*/
     /*line-height: 4em;*/
     /*text-align: center;*/
+    padding: 5px;
     cursor: pointer;
     -webkit-transition: top 0.2s,
                         left 0.2s,
@@ -125,64 +126,96 @@
 
   /*CSS for custom panel styles*/
 
-.grid-panel {
+.grid-panel-tile {
   height: 100%;
   margin-bottom: 0px;
 }
 
-.grid-panel-heading {
-  height: 15%;
-}
 
-.grid-panel-body {
-  height: 70%;
+.grid-panel-body-tile {
+  /*Do not like this calculation. Sets body height minus the header and footer of panel so we can center panel content.*/
+  height: calc(100% - 88px);
   padding-top: 5px;
-  padding-bottom: 5px;
+  padding-bottom: 0px;
 }
 
-.grid-chart-image {
+.grid-panel-body-content-tile {
+  height: 100%;
+  display:flex;
+  align-items:center;
+}
+
+.grid-panel-body-content-tile * {
+}
+
+.grid-chart-image-tile {
   width: 100%;
 }
 
-.grid-footer {
-  height:15%;
+.grid-footer-tile {
+  position: absolute;
+  bottom: 9px;
+  width: 100%;
   display:flex;
   align-items: center;
-  padding-top:15px;
 }
 
-.panel-search-button {
-  margin-bottom: 10px;
-}
-
-.panel-short-desc {
+.panel-short-desc-tile {
   font-size: 13px;
   margin-bottom: 0px;
+  line-height: 100%;
+}
+
+.grid-panel-body-list {
+  height: calc(100% - 42px);
+}
+
+.panel-search-button-list {
+  position: absolute;
+  bottom: -10px;
+  right: 5px;
+}
+
+.grid-desc-container-list {
+  height: 100%;
+}
+
+.grid-chart-image-container-list {
+  height: 100%;
+}
+
+.grid-chart-image-list {
+  height: 100%;
+}
+
+.panel-long-desc-list {
+  margin-bottom: 15px;
+}
+
+.panel-tags-list {
+  margin-right: 48px;
 }
 
 /*Media queries for panel font size*/
 
-/* Custom, iPhone Retina */ 
-    @media only screen and (min-width : 320px) {
-        
-    }
-
     /* Extra Small Devices, Phones */ 
-    @media only screen and (min-width : 480px) {
-
+    @media only screen and (max-width : 480px) {
+      /*.grid-chart-image-container {
+        display: none !important;
+      }*/
     }
 
     /* Small Devices, Tablets */
-    @media only screen and (min-width : 768px) {
+    @media only screen and (max-width : 768px) {
 
     }
 
     /* Medium Devices, Desktops */
-    @media only screen and (min-width : 992px) {
+    @media only screen and (max-width : 992px) {
 
     }
 
     /* Large Devices, Wide Screens */
-    @media only screen and (min-width : 1200px) {
+    @media only screen and (max-width : 1200px) {
 
     }
